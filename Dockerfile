@@ -14,5 +14,6 @@ ENV DB_USER="postgres"
 ENV DB_PASS="admin"
 ENV DB_PORT="5432"
 ENV DB_NAME="blog_db"
+ENV AWS_STORAGE_BUCKET_NAME="blog-bucket-0455"
 
 CMD ["/bin/bash", "-c", "python3 manage.py migrate;python3 manage.py runserver 0.0.0.0:8000"]
