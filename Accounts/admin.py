@@ -20,7 +20,7 @@ class AccountAdmin(UserAdmin):
             'classes': ('wide',),
             'fields': ('username', 'email', 'password1', 'password2'),
         }),
-        (_('Personal info'), {'fields': ('first_name', 'last_name', 'email', 'address')}),
+        (_('Personal info'), {'fields': ('first_name', 'last_name', 'email')}), #, 'address'
         (_('Permissions'), {
             'fields': ('is_active', 'is_staff', 'is_superuser'),
         }),

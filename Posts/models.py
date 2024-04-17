@@ -1,6 +1,6 @@
 from django.db import models
 from Accounts.models import Account
-
+from storages.backends.s3boto3 import S3Boto3Storage
 
 class Category(models.Model):
     category = models.CharField(max_length=30, blank=False, null=False, verbose_name='Category')
@@ -13,7 +13,7 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=100, blank=False, verbose_name='Title')
     date = models.DateTimeField(auto_now_add=True, verbose_name='Post Date')
-    pic = models.ImageField(upload_to='photos/%Y/%M/%D', verbose_name='Post Picture')
+    pic = models.ImageField(upload_to='photos/%Y/%M/%D', storage=S3Boto3Storage(), verbose_name='Post Picture')
     content = models.TextField(max_length=20000, blank=False, verbose_name='Post Content')
     category = models.ForeignKey(Category, on_delete=models.SET_DEFAULT, default='6',
                                  related_name='posts_related')

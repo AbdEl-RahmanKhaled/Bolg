@@ -12,5 +12,7 @@ ENV PRIVET_KEY=d"jango-insecure-73^7k)g32y4#^&k%#vh#^7-ip(xo3ttg^0)lsmdiy7kd7k^k
 ENV DB_HOST="db_server"
 ENV DB_USER="postgres"
 ENV DB_PASS="admin"
+ENV DB_PORT="5432"
+ENV DB_NAME="blog_db"
 
-CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8000" ]
+CMD ["/bin/bash", "-c", "python3 manage.py migrate;python3 manage.py runserver 0.0.0.0:8000"]
