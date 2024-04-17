@@ -146,8 +146,8 @@ EMAIL_HOST_PASSWORD = '3laFeen@2021'
 from storages.backends.s3boto3 import S3Boto3Storage
 
 # AWS Credentials
-AWS_ACCESS_KEY_ID = 'AKIATQRBZHULWKUXWY2H'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
 AWS_STORAGE_BUCKET_NAME = 'blog-bucket-0455'
 
 # S3 Storage Backend
