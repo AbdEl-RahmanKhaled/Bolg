@@ -168,12 +168,11 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = '3laafeen@gmail.com'
 EMAIL_HOST_PASSWORD = '3laFeen@2021'
 
-from storages.backends.s3boto3 import S3Boto3Storage
+# from storages.backends.s3boto3 import S3Boto3Storage
 
-# AWS Credentials
+# # AWS Credentials
 
-AWS_STORAGE_BUCKET_NAME = 'blog-bucket-0455'
 
-# S3 Storage Backend
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# # S3 Storage Backend
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
